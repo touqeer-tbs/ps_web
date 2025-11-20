@@ -17,7 +17,7 @@ import { SocketIoService } from '@core/socket-io';
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit, OnDestroy {
-  title = 'angular-boilerplate';
+  title = 'ps-web';
 
   constructor(
     private readonly _router: Router,
