@@ -1,7 +1,26 @@
-nav {
-  position: relative;
-  background-color: var(--white);
-  padding: 0.8rem 1rem;
+.main-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space between search and language selector */
+}
+
+.search-box {
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }

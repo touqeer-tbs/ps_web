@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { UntilDestroy } from '@ngneat/until-destroy';
 
 @UntilDestroy()
@@ -10,4 +10,16 @@ import { UntilDestroy } from '@ngneat/until-destroy';
 })
 export class HeaderComponent {
   menuHidden = true;
+  searchText: string = '';
+
+  @Output() search = new EventEmitter<string>();
+  @Output() toggleSidebar = new EventEmitter<void>();
+
+  onSearchChange() {
+    this.search.emit(this.searchText);
+  }
+
+  onToggleSidebar() {
+    this.toggleSidebar.emit();
+  }
 }

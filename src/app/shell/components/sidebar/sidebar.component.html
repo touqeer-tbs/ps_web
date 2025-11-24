@@ -1,7 +1,7 @@
 <nav [class.expanded]="navExpanded" [class.collapsed]="!navExpanded">
   <!-- Toggle Button -->
   <span (click)="toggleSidebar(!navExpanded)" [ngClass]="{ open: navExpanded }" class="toggle-icon">
-    <i class="material-icons">menu</i>
+    <i class="material-icons" style="color: white">menu</i>
   </span>
 
   <!-- Logo -->
@@ -57,7 +57,10 @@
 
   <!-- Footer -->
   <div class="sidebar-footer">
-    <span class="text">Version {{ version }}</span>
-    <span class="text">&copy; {{ year }}</span>
+    <!-- Logout Button -->
+    <button class="logout-button" (click)="logout()">
+      <i class="material-icons" style="color: white">logout</i>
+      <span class="text">Logout</span>
+    </button>
   </div>
 </nav>

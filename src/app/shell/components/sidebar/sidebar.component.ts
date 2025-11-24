@@ -30,6 +30,13 @@ export class SidebarComponent implements OnInit {
     this.sidebarItems = webSidebarMenuItems;
   }
 
+  logout() {
+    // Perform logout logic here
+    // Example: call auth service and navigate to login page
+    // this.authService.logout(); // assuming you have an AuthService
+    // this.router.navigate(['/login']);
+  }
+
   ngOnInit(): void {
     this.shellService.activeNavTab(this.sidebarItems, this.sidebarExtendedItem);
 
