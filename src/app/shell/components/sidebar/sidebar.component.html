@@ -6,8 +6,8 @@
 
   <!-- Logo -->
   <div class="logo-container" routerLink="/">
-    <img alt="Logo" class="logo" src="images/placeholder.png" />
-    <h4>Brand Title</h4>
+    <img alt="Logo" class="logo" src="images/logo.png" />
+    <h4 class="text">James 19</h4>
   </div>
 
   <!-- Menu Items -->
@@ -26,7 +26,7 @@
               <i *ngIf="item.icon" class="material-icons" [style.color]="item.active ? 'var(--gray-400)' : 'var(--sidebar-icon-color)'">
                 {{ item.icon }}
               </i>
-              <span>{{ item.title | translate }}</span>
+              <span class="text">{{ item.title | translate }}</span>
             </div>
 
             <!-- Submenu toggle icon -->
@@ -57,7 +57,7 @@
 
   <!-- Footer -->
   <div class="sidebar-footer">
-    <span>Version {{ version }}</span>
-    <span>&copy; {{ year }}</span>
+    <span class="text">Version {{ version }}</span>
+    <span class="text">&copy; {{ year }}</span>
   </div>
 </nav>
