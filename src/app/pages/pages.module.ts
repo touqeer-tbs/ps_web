@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PagesRoutingModule } from './pages-routing.module';
+// import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [],

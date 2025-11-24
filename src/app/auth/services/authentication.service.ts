@@ -10,7 +10,6 @@ export interface LoginContext {
   remember?: boolean;
   isMobile?: boolean;
 }
-
 @Injectable({
   providedIn: 'root',
 })

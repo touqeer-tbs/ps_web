@@ -5,7 +5,7 @@ import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { filter } from 'rxjs/operators';
 import { NavMode, ShellService } from '@app/shell/services/shell.service';
 import { webSidebarMenuItems } from '@core/constants';
-import { CredentialsService } from '@auth';
+import { AuthenticationService, CredentialsService } from '@auth';
 import { NavMenuItem } from '@core/interfaces';
 
 @UntilDestroy({ checkProperties: true })
@@ -25,6 +25,7 @@ export class SidebarComponent implements OnInit {
   constructor(
     private readonly _router: Router,
     private readonly _credentialsService: CredentialsService,
+    private readonly _authService: AuthenticationService,
     public shellService: ShellService,
   ) {
     this.sidebarItems = webSidebarMenuItems;
@@ -33,8 +34,8 @@ export class SidebarComponent implements OnInit {
   logout() {
     // Perform logout logic here
     // Example: call auth service and navigate to login page
-    // this.authService.logout(); // assuming you have an AuthService
-    // this.router.navigate(['/login']);
+    this._authService.logout(); // assuming you have an AuthService
+    this._router.navigate(['/login']);
   }
 
   ngOnInit(): void {
