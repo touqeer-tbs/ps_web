@@ -3,7 +3,7 @@ import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { BehaviorSubject, Observable, Subscription } from 'rxjs';
 
 import deDE from '../../translations/de-De.json';
-import enUS from '../../translations/en-US.json';
+import enGB from '../../translations/en-GB.json';
 import esES from '../../translations/es-ES.json';
 import frFR from '../../translations/fr-FR.json';
 import itIT from '../../translations/it-IT.json';
@@ -29,7 +29,7 @@ export class I18nService {
 
     // Embed languages to avoid extra HTTP requests
     _translateService.setTranslation('de-DE', deDE);
-    _translateService.setTranslation('en-US', enUS);
+    _translateService.setTranslation('en-GB', enGB);
     _translateService.setTranslation('es-ES', esES);
     _translateService.setTranslation('fr-FR', frFR);
     _translateService.setTranslation('it-IT', itIT);

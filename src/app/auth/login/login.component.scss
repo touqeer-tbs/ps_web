@@ -131,14 +131,21 @@ label {
 .options {
   display: flex;
   justify-content: space-between;
-  margin-top: -5px;
+  align-items: center; // vertically align checkbox and label
+  margin-top: -15px;
 
   .remember {
+    display: flex; // use flex for label content
+    align-items: center; // vertically align checkbox and text
     font-size: 14px;
     color: #475569;
+    cursor: pointer;
 
     input {
       margin-right: 6px;
+      margin-top: 16px;
+      width: 12px; // optional: adjust checkbox size
+      height: 12px;
     }
   }
 
